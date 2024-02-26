@@ -1,0 +1,12 @@
+AttributeError: 
+このアプリでエラーが発生しました。元のエラーメッセージは、データ漏洩を防ぐために編集されています。
+エラーの詳細はすべてログに記録されています(Streamlit Cloudを使用している場合は、アプリの右下にある[アプリの管理]をクリックします)。
+
+Traceback:
+File "/home/adminuser/venv/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 565, in _run_script
+    exec(code, module.__dict__)
+File "/mount/src/langchain_test/app.py", line 12, in <module>
+    os.environ["OPENAI_API_KEY"] = st.secrets.OpenAIAPI.openai_api_key
+File "/home/adminuser/venv/lib/python3.9/site-packages/streamlit/runtime/secrets.py", line 258, in __getattr__
+    raise AttributeError(_missing_attr_error_message(key))
+    
